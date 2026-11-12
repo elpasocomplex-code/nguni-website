@@ -32,25 +32,21 @@ a{color:inherit;text-decoration:none}
 /* HERO */
 .hero{background:#0a1128;color:#fff;padding:80px 24px;text-align:left}
 .hero-inner{max-width:1000px;margin:0 auto}
-.hero h1{font-size:60px;line-height:1.1;color:#fff;margin-bottom:20px;font-weight:400}
+.hero h1{font-size:68px; line-height:1.1; color:#fff; margin-bottom:20px; font-weight:900; letter-spacing:-1px;}
 .hero-meta{display:flex;gap:30px;font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#8e9baf;flex-wrap:wrap}
 
-/* QUICK NAVIGATION CARDS (5-Card Layout) */
+/* QUICK NAVIGATION CARDS (6 Cards) */
 .quick-nav{padding:0 24px 60px;margin-top:-30px;position:relative;z-index:10}
 .quick-nav-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:15px}
 
-/* Make the 5th card span full width on mobile */
-.q-card:nth-child(5){grid-column:span 2;}
-
-/* On desktop, spread all 5 nicely */
-@media (min-width:768px){
-  .quick-nav-inner{grid-template-columns:repeat(5,1fr);}
-  .q-card:nth-child(5){grid-column:auto;}
-}
-
-.q-card{background:#fff;border:1px solid #eee;padding:24px 20px;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,0.08);cursor:pointer;text-align:center;transition:transform 0.2s, border-color 0.2s;display:flex;align-items:center;justify-content:center;}
+.q-card{background:#fff;border:1px solid #eee;padding:20px 15px;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,0.08);cursor:pointer;text-align:center;transition:transform 0.2s, border-color 0.2s;display:flex;align-items:center;justify-content:center;}
 .q-card:hover{transform:translateY(-5px);border-color:#c5a059}
-.q-card h3{font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#0a1128;margin:0;text-transform:uppercase;letter-spacing:1px}
+.q-card h3{font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#0a1128;margin:0;text-transform:uppercase;letter-spacing:1px}
+
+/* On desktop, spread all 6 nicely (3 columns x 2 rows) */
+@media (min-width:768px){
+  .quick-nav-inner{grid-template-columns:repeat(3,1fr);}
+}
 
 /* MAIN SECTIONS */
 .section{padding:80px 24px;border-bottom:1px solid #eee}
@@ -86,6 +82,13 @@ a{color:inherit;text-decoration:none}
 .course-list li:last-child{border-bottom:none;padding-bottom:0;}
 .course-code{font-family:Arial,Helvetica,sans-serif;font-weight:700;color:#0a1128;display:inline-block;width:90px;}
 
+/* GALLERY */
+.gallery-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:30px;}
+.gallery-card{background:#fff;border:1px solid #eee;border-radius:8px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,0.05);}
+.gallery-img{width:100%;height:250px;object-fit:cover;transition:transform 0.3s;}
+.gallery-img:hover{transform:scale(1.05);}
+.gallery-caption{padding:15px;font-family:Arial,Helvetica,sans-serif;font-size:13.5px;color:#444;line-height:1.5;text-align:center;background:#fcfcfc;}
+
 /* CV SECTION */
 .cv-section{background:#0a1128;color:#fff;padding:60px 24px;text-align:center;}
 .cv-section h2{color:#fff;font-size:32px;margin-bottom:15px;}
@@ -106,9 +109,10 @@ footer a{color:#c5a059}
 .nav-links{display:none}
 .mobile-menu-btn{display:block}
 .about-grid{grid-template-columns:1fr}
-.hero h1{font-size:42px}
+.hero h1{font-size:46px;}
 .contact-grid{grid-template-columns:1fr}
 .course-code{width:100%;margin-bottom:5px;}
+.gallery-grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
@@ -125,6 +129,7 @@ footer a{color:#c5a059}
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
       <a href="#teaching">Teaching</a>
+      <a href="#gallery">Gallery</a>
       <a href="#cv">CV</a>
       <a href="#contact">Contact</a>
     </div>
@@ -139,6 +144,7 @@ footer a{color:#c5a059}
     <a href="#research" onclick="toggleMenu()">Research</a>
     <a href="#publications" onclick="toggleMenu()">Publications</a>
     <a href="#teaching" onclick="toggleMenu()">Teaching</a>
+    <a href="#gallery" onclick="toggleMenu()">Gallery</a>
     <a href="#cv" onclick="toggleMenu()">Curriculum Vitae</a>
     <a href="#contact" onclick="toggleMenu()">Contact</a>
   </div>
@@ -156,12 +162,13 @@ footer a{color:#c5a059}
   </div>
 </header>
 
-<!-- QUICK NAVIGATION CARDS (5 Cards matching your drawing) -->
+<!-- QUICK NAVIGATION CARDS (6 Cards) -->
 <div class="quick-nav">
   <div class="quick-nav-inner">
     <a href="#publications" class="q-card"><h3>Publications</h3></a>
     <a href="#research" class="q-card"><h3>Research</h3></a>
     <a href="#teaching" class="q-card"><h3>Teaching</h3></a>
+    <a href="#gallery" class="q-card"><h3>Gallery</h3></a>
     <a href="#contact" class="q-card"><h3>Contact</h3></a>
     <a href="#cv" class="q-card"><h3>Curriculum Vitae</h3></a>
   </div>
@@ -244,7 +251,6 @@ footer a{color:#c5a059}
     
     <div id="more-courses" class="hidden-content">
       
-      <!-- 100 Level -->
       <div class="course-level-box">
         <div class="course-level-title">100 Level Courses</div>
         <ul class="course-list">
@@ -254,7 +260,6 @@ footer a{color:#c5a059}
         </ul>
       </div>
 
-      <!-- 200 Level -->
       <div class="course-level-box">
         <div class="course-level-title">200 Level Courses</div>
         <ul class="course-list">
@@ -265,7 +270,6 @@ footer a{color:#c5a059}
         </ul>
       </div>
 
-      <!-- 400 Level -->
       <div class="course-level-box">
         <div class="course-level-title">400 Level Courses</div>
         <ul class="course-list">
@@ -275,7 +279,6 @@ footer a{color:#c5a059}
         </ul>
       </div>
 
-      <!-- 500 Level -->
       <div class="course-level-box">
         <div class="course-level-title">500 Level Courses</div>
         <ul class="course-list">
@@ -300,13 +303,59 @@ footer a{color:#c5a059}
   </div>
 </section>
 
+<!-- GALLERY SECTION -->
+<section id="gallery" class="section">
+  <div class="section-inner">
+    <span class="section-title">Life and Events</span>
+    <h2>Gallery</h2>
+    
+    <div class="gallery-grid">
+      
+      <div class="gallery-card">
+        <img class="gallery-img" src="https://res.cloudinary.com/kqymjysn/image/upload/w_600,q_auto,f_auto/v1791965412/IMG_4122.jpg" alt="Meeting with the Rector">
+        <div class="gallery-caption">Meeting and greeting with the Rector at the beginning of the 2026/2027 academic year.</div>
+      </div>
+
+      <div class="gallery-card">
+        <img class="gallery-img" src="https://res.cloudinary.com/kqymjysn/image/upload/w_600,q_auto,f_auto/v1791965602/IMG_1774.jpg" alt="International Conference on Child Labour">
+        <div class="gallery-caption">At the international conference on child labour organised by the University of Bertoua.</div>
+      </div>
+
+      <div class="gallery-card">
+        <img class="gallery-img" src="https://res.cloudinary.com/kqymjysn/image/upload/w_600,q_auto,f_auto/v1791965665/IMG_1753.jpg" alt="Pedagogic Seminar">
+        <div class="gallery-caption">At the pedagogic seminar organised by the University of Bertoua.</div>
+      </div>
+
+      <div class="gallery-card">
+        <img class="gallery-img" src="https://res.cloudinary.com/kqymjysn/image/upload/w_600,q_auto,f_auto/v1791965631/IMG_1850.jpg" alt="Presentation Podium">
+        <div class="gallery-caption">Presentation podium.</div>
+      </div>
+
+      <div class="gallery-card">
+        <img class="gallery-img" src="https://res.cloudinary.com/kqymjysn/image/upload/w_600,q_auto,f_auto/v1791965553/IMG_3655.jpg" alt="Handing Attestations">
+        <div class="gallery-caption">Handing attestations to some students that I trained out of the classroom milieu.</div>
+      </div>
+
+      <div class="gallery-card">
+        <img class="gallery-img" src="https://res.cloudinary.com/kqymjysn/image/upload/w_600,q_auto,f_auto/v1791965500/IMG_3653.jpg" alt="Handing Attestations">
+        <div class="gallery-caption">Handing attestations to students.</div>
+      </div>
+
+      <div class="gallery-card">
+        <img class="gallery-img" src="https://res.cloudinary.com/kqymjysn/image/upload/w_600,q_auto,f_auto/v1791965574/8ed270d1-8e1f-4825-be10-aad49f7ef686.jpg" alt="With Colleagues">
+        <div class="gallery-caption">With some colleagues of the University of Bertoua.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- CURRICULUM VITAE SECTION -->
 <section id="cv" class="cv-section">
   <div class="section-inner">
     <h2>Curriculum Vitae</h2>
     <p>Download the complete and updated Curriculum Vitae of Dr. Mackeus Nguni, including detailed academic history, publications, and references.</p>
     
-    <!-- Replace the # with the link to your PDF -->
     <a href="#" class="btn btn-gold" style="padding:15px 40px; font-size:16px;">Download Full CV (PDF)</a>
   </div>
 </section>
@@ -333,7 +382,6 @@ footer a{color:#c5a059}
 
 <!-- JAVASCRIPT FOR INTERACTIVITY -->
 <script>
-// Mobile Menu Toggle
 function toggleMenu() {
   var menu = document.getElementById("mobileMenu");
   if (menu.classList.contains("open")) {
@@ -343,7 +391,6 @@ function toggleMenu() {
   }
 }
 
-// Read More / Read Less Toggle
 function toggleReadMore(id, btn) {
   var content = document.getElementById(id);
   if (content.style.display === "block") {
