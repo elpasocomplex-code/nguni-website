@@ -10,12 +10,12 @@
 /* GENERAL */
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:Georgia, 'Times New Roman', serif;color:#333;line-height:1.8;background:#fff;-webkit-font-smoothing:antialiased}
+body{font-family:Georgia, 'Times New Roman', serif;color:#333;line-height:1.8;background:#fcfbfa;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 
 /* HEADER & NAVIGATION */
-.topnav{background:#0a1128;color:#fff;position:sticky;top:0;z-index:1000;border-bottom:1px solid #1c2b4a}
+.topnav{background:#0a1128;color:#fff;position:sticky;top:0;z-index:1000;border-bottom:1px solid #1c2b4a; box-shadow: 0 4px 15px rgba(0,0,0,0.1);}
 .topnav-inner{max-width:1100px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .brand{font-size:18px;font-weight:700;letter-spacing:1px;color:#fff;font-family:Arial,Helvetica,sans-serif;text-transform:uppercase}
 .brand span{color:#c5a059}
@@ -30,7 +30,7 @@ a{color:inherit;text-decoration:none}
 .mobile-menu.open{display:flex}
 
 /* HERO */
-.hero{background:#0a1128;color:#fff;padding:80px 24px;text-align:left}
+.hero{background:#0a1128;color:#fff;padding:90px 24px;text-align:left}
 .hero-inner{max-width:1000px;margin:0 auto}
 .hero h1{font-size:68px; line-height:1.1; color:#fff; margin-bottom:20px; font-weight:900; letter-spacing:-1px;}
 .hero-meta{display:flex;gap:30px;font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#8e9baf;flex-wrap:wrap}
@@ -39,7 +39,7 @@ a{color:inherit;text-decoration:none}
 .quick-nav{padding:0 24px 60px;margin-top:-30px;position:relative;z-index:10}
 .quick-nav-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:15px}
 
-.q-card{background:#fff;border:1px solid #eee;padding:20px 15px;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,0.08);cursor:pointer;text-align:center;transition:transform 0.2s, border-color 0.2s;display:flex;align-items:center;justify-content:center;}
+.q-card{background:#fff;border:1px solid #e5e7eb;padding:20px 15px;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,0.08);cursor:pointer;text-align:center;transition:transform 0.2s, border-color 0.2s;display:flex;align-items:center;justify-content:center;}
 .q-card:hover{transform:translateY(-5px);border-color:#c5a059}
 .q-card h3{font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#0a1128;margin:0;text-transform:uppercase;letter-spacing:1px}
 
@@ -49,11 +49,17 @@ a{color:inherit;text-decoration:none}
 }
 
 /* MAIN SECTIONS */
-.section{padding:80px 24px;border-bottom:1px solid #eee}
+.section{padding:80px 24px;border-bottom:1px solid #e5e7eb}
 .section-inner{max-width:900px;margin:0 auto}
-.section-title{font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#c5a059;margin-bottom:12px;display:block}
-.section h2{font-size:32px;color:#0a1128;margin-bottom:30px;font-weight:700;line-height:1.3}
-.section p{font-size:17px;color:#444;margin-bottom:18px}
+
+/* MILD, PREMIUM BACKGROUNDS */
+.section-warm{background:#f9f8f6;} /* Warm Ivory */
+.section-mist{background:#f4f6f8;} /* Soft Mist */
+
+/* BOLDER SECTION TITLES */
+.section-title{font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:800;letter-spacing:2.5px;text-transform:uppercase;color:#c5a059;margin-bottom:8px;display:block}
+.section h2{font-size:36px;color:#0a1128;margin-bottom:30px;font-weight:800;line-height:1.2; letter-spacing:-0.5px;}
+.section p{font-size:17.5px;color:#333;margin-bottom:18px}
 
 /* ABOUT PHOTO */
 .about-grid{display:grid;grid-template-columns:260px 1fr;gap:40px;align-items:start}
@@ -68,10 +74,10 @@ a{color:inherit;text-decoration:none}
 .hidden-content{display:none;margin-top:20px;padding-top:20px;border-top:1px dashed #ccc}
 
 /* PUBLICATIONS */
-.pub-category{font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#888;margin:40px 0 20px;padding-bottom:10px;border-bottom:1px solid #eee}
+.pub-category{font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#666;margin:40px 0 20px;padding-bottom:10px;border-bottom:1px solid #d1d5db}
 .pub-category:first-of-type{margin-top:0;}
-.pub-item{display:block;padding:20px 0;border-bottom:1px solid #eee;text-decoration:none;transition:background 0.2s}
-.pub-item:hover{background:#fcfcfc}
+.pub-item{display:block;padding:20px 0;border-bottom:1px solid #e5e7eb;text-decoration:none;transition:background 0.2s}
+.pub-item:hover{background:rgba(0,0,0,0.02)}
 .pub-title{font-size:18px;color:#0a1128;margin-bottom:6px;font-weight:700;line-height:1.4}
 .pub-meta{font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#c5a059;margin-bottom:4px;font-weight:600;}
 .pub-contrib{font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#666;font-style:italic}
@@ -90,11 +96,11 @@ a{color:inherit;text-decoration:none}
 .gallery-card{background:#fff;border:1px solid #eee;border-radius:8px;overflow:hidden;box-shadow:0 4px 15px rgba(0,0,0,0.05);}
 .gallery-img{width:100%;height:250px;object-fit:cover;transition:transform 0.3s;}
 .gallery-img:hover{transform:scale(1.05);}
-.gallery-caption{padding:18px;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333;line-height:1.6;text-align:center;background:#fcfcfc;font-style:italic;}
+.gallery-caption{padding:18px;font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#333;line-height:1.6;text-align:center;background:#fff;font-style:italic;}
 
 /* CV SECTION */
-.cv-section{background:#0a1128;color:#fff;padding:60px 24px;text-align:center;}
-.cv-section h2{color:#fff;font-size:32px;margin-bottom:15px;}
+.cv-section{background:#0a1128;color:#fff;padding:70px 24px;text-align:center;}
+.cv-section h2{color:#fff;font-size:36px;margin-bottom:15px;font-weight:800;}
 .cv-section p{color:#a8b2c1;font-size:17px;margin-bottom:30px;max-width:600px;margin-left:auto;margin-right:auto;}
 
 /* CONTACT */
@@ -113,6 +119,7 @@ footer a{color:#c5a059}
 .mobile-menu-btn{display:block}
 .about-grid{grid-template-columns:1fr}
 .hero h1{font-size:46px;}
+.section h2{font-size:28px;}
 .contact-grid{grid-template-columns:1fr}
 .course-code{width:100%;margin-bottom:5px;}
 .gallery-grid{grid-template-columns:1fr;}
@@ -178,7 +185,7 @@ footer a{color:#c5a059}
 </div>
 
 <!-- ABOUT SECTION -->
-<section id="about" class="section">
+<section id="about" class="section section-warm">
   <div class="section-inner">
     <span class="section-title">Academic Profile</span>
     <h2>About Dr. Nguni</h2>
@@ -204,7 +211,7 @@ footer a{color:#c5a059}
 </section>
 
 <!-- RESEARCH SECTION -->
-<section id="research" class="section" style="background:#f9f9f9;">
+<section id="research" class="section section-mist">
   <div class="section-inner">
     <span class="section-title">Specialisation</span>
     <h2>Theoretical Orientation</h2>
@@ -220,7 +227,7 @@ footer a{color:#c5a059}
 </section>
 
 <!-- PUBLICATIONS SECTION -->
-<section id="publications" class="section">
+<section id="publications" class="section section-warm">
   <div class="section-inner">
     <span class="section-title">Selected Works</span>
     <h2>Publications</h2>
@@ -281,7 +288,7 @@ footer a{color:#c5a059}
 </section>
 
 <!-- TEACHING SECTION -->
-<section id="teaching" class="section" style="background:#f9f9f9;">
+<section id="teaching" class="section section-mist">
   <div class="section-inner">
     <span class="section-title">Academic Experience</span>
     <h2>Teaching</h2>
@@ -343,7 +350,7 @@ footer a{color:#c5a059}
 </section>
 
 <!-- GALLERY SECTION -->
-<section id="gallery" class="section">
+<section id="gallery" class="section section-warm">
   <div class="section-inner">
     <span class="section-title">Life and Events</span>
     <h2>Gallery</h2>
@@ -400,7 +407,7 @@ footer a{color:#c5a059}
 </section>
 
 <!-- CONTACT SECTION -->
-<section id="contact" class="section">
+<section id="contact" class="section section-warm">
   <div class="section-inner">
     <span class="section-title">Get in Touch</span>
     <h2>Contact Dr. Nguni</h2>
