@@ -4,224 +4,249 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dr. Mackeus Nguni | Scholar of African Literature</title>
-<meta name="description" content="Academic portfolio of Dr. Mackeus Nguni, Lecturer in English Language at the University of Bertoua, Cameroon. Specialising in African Literature, Ecocriticism, and Ethnocriticism.">
+<meta name="description" content="Academic portfolio of Dr. Mackeus Nguni, Lecturer in English Language at the University of Bertoua, Cameroon.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%230b1325'/><text x='50' y='68' font-size='60' font-family='Georgia' font-weight='bold' fill='%23c5a059' text-anchor='middle'>N</text></svg>">
 <style>
+/* GENERAL */
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:Georgia, 'Times New Roman', serif;color:#333;line-height:1.8;background:#fff;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 
-/* TOP NAV (Sticky) */
+/* HEADER & NAVIGATION */
 .topnav{background:#0a1128;color:#fff;position:sticky;top:0;z-index:1000;border-bottom:1px solid #1c2b4a}
-.topnav-inner{max-width:1100px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.topnav-inner{max-width:1100px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .brand{font-size:18px;font-weight:700;letter-spacing:1px;color:#fff;font-family:Arial,Helvetica,sans-serif;text-transform:uppercase}
 .brand span{color:#c5a059}
-.nav-links{display:flex;gap:24px;flex-wrap:wrap;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase}
-.nav-links a{color:#a8b2c1;transition:color 0.2s}
+.nav-links{display:flex;gap:20px;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase}
+.nav-links a{color:#a8b2c1;transition:color 0.2s;cursor:pointer}
 .nav-links a:hover{color:#c5a059}
 
-/* HERO SECTION (Dark & Premium) */
-.hero{background:#0a1128;color:#fff;padding:90px 24px;text-align:left;border-bottom:4px solid #c5a059}
-.hero-inner{max-width:1000px;margin:0 auto}
-.hero h1{font-size:64px;line-height:1.1;color:#fff;margin-bottom:24px;font-weight:400}
-.hero-quote{font-size:20px;font-style:italic;color:#a8b2c1;max-width:800px;border-left:3px solid #c5a059;padding-left:20px;margin-bottom:30px;line-height:1.6}
-.hero-meta{display:flex;gap:30px;font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#8e9baf;margin-bottom:30px;flex-wrap:wrap}
-.hero-meta span{display:flex;align-items:center;gap:8px}
-.btn-hero{display:inline-block;padding:12px 24px;border-radius:4px;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;background:#c5a059;color:#0a1128;transition:background 0.2s}
-.btn-hero:hover{background:#d4b372}
+/* MOBILE MENU (Hidden by default) */
+.mobile-menu-btn{display:none;background:none;border:none;color:#fff;font-size:24px;cursor:pointer}
+.mobile-menu{display:none;background:#0a1128;flex-direction:column;padding:20px;border-bottom:1px solid #1c2b4a}
+.mobile-menu a{color:#fff;padding:12px 0;border-bottom:1px solid #1c2b4a;font-family:Arial,Helvetica,sans-serif;font-size:14px;text-transform:uppercase;cursor:pointer;}
+.mobile-menu.open{display:flex}
 
-/* MAIN CONTENT SECTIONS (White & Clean) */
-.section{padding:70px 24px}
+/* HERO */
+.hero{background:#0a1128;color:#fff;padding:80px 24px;text-align:left}
+.hero-inner{max-width:1000px;margin:0 auto}
+.hero h1{font-size:60px;line-height:1.1;color:#fff;margin-bottom:20px;font-weight:400}
+.hero-meta{display:flex;gap:30px;font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#8e9baf;flex-wrap:wrap}
+
+/* QUICK NAVIGATION CARDS */
+.quick-nav{padding:0 24px 60px;margin-top:-30px;position:relative;z-index:10}
+.quick-nav-inner{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.q-card{background:#fff;border:1px solid #eee;padding:24px 20px;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,0.08);cursor:pointer;text-align:center;transition:transform 0.2s, border-color 0.2s}
+.q-card:hover{transform:translateY(-5px);border-color:#c5a059}
+.q-card h3{font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#0a1128;margin:0;text-transform:uppercase;letter-spacing:1px}
+
+/* MAIN SECTIONS */
+.section{padding:80px 24px;border-bottom:1px solid #eee}
 .section-inner{max-width:900px;margin:0 auto}
 .section-title{font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#c5a059;margin-bottom:12px;display:block}
 .section h2{font-size:32px;color:#0a1128;margin-bottom:30px;font-weight:700;line-height:1.3}
 .section p{font-size:17px;color:#444;margin-bottom:18px}
 
-/* ABOUT SECTION WITH PHOTO */
-.about-grid{display:grid;grid-template-columns:280px 1fr;gap:40px;align-items:start}
-.profile-photo{width:100%;height:auto;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,0.1);background:#eee;border:5px solid #fff;}
+/* ABOUT PHOTO */
+.about-grid{display:grid;grid-template-columns:260px 1fr;gap:40px;align-items:start}
+.profile-photo{width:100%;height:auto;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,0.1);border:5px solid #fff;}
+
+/* READ MORE & BUTTONS */
+.btn{display:inline-block;padding:12px 24px;border-radius:4px;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;cursor:pointer;transition:background 0.2s;text-align:center;border:none}
+.btn-outline{background:#fff;color:#0a1128;border:2px solid #0a1128}
+.btn-outline:hover{background:#0a1128;color:#fff}
+.btn-gold{background:#c5a059;color:#0a1128}
+.btn-gold:hover{background:#d4b372}
+.hidden-content{display:none;margin-top:20px;padding-top:20px;border-top:1px dashed #ccc}
 
 /* PUBLICATIONS */
-.pub-category{font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#888;margin:40px 0 20px;padding-bottom:10px;border-bottom:1px solid #eee}
 .pub-item{display:block;padding:20px 0;border-bottom:1px solid #eee;text-decoration:none;transition:background 0.2s}
 .pub-item:hover{background:#fcfcfc}
 .pub-title{font-size:18px;color:#0a1128;margin-bottom:6px;font-weight:700;line-height:1.4}
 .pub-meta{font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#666;margin-bottom:4px}
 .pub-contrib{font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#999;font-style:italic}
 
-/* TEACHING TABLE */
+/* TABLE */
 .cv-table{width:100%;border-collapse:collapse;margin-top:20px;font-family:Arial,Helvetica,sans-serif;font-size:14.5px;}
 .cv-table th{text-align:left;padding:12px;background:#0a1128;color:#fff;font-weight:700;}
 .cv-table td{padding:12px;border-bottom:1px solid #eee;color:#444;vertical-align:top;}
 .cv-table tr:nth-child(even){background:#fcfcfc;}
 
-/* CONTACT BUTTONS */
+/* CONTACT */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:30px}
-.btn-contact{display:block;text-align:center;padding:16px;border-radius:8px;font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:15px;transition:0.2s}
+.btn-contact{display:block;text-align:center;padding:16px;border-radius:8px;font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:15px;}
 .btn-primary{background:#0a1128;color:#fff;}
-.btn-primary:hover{background:#1c2b4a;}
 .btn-whatsapp{background:#25D366;color:#fff;}
-.btn-whatsapp:hover{background:#1eb955;}
 
 /* FOOTER */
-footer{background:#0a1128;color:#8e9baf;padding:40px 20px;text-align:center;font-family:Arial,Helvetica,sans-serif;font-size:13px;border-top:1px solid #1c2b4a}
+footer{background:#0a1128;color:#8e9baf;padding:40px 20px;text-align:center;font-family:Arial,Helvetica,sans-serif;font-size:13px}
 footer a{color:#c5a059}
-footer a:hover{text-decoration:underline}
 
-/* MOBILE */
-@media (max-width:768px){
+/* MOBILE RESPONSIVENESS */
+@media (max-width:800px){
+.nav-links{display:none}
+.mobile-menu-btn{display:block}
+.quick-nav-inner{grid-template-columns:1fr 1fr}
 .about-grid{grid-template-columns:1fr}
 .hero h1{font-size:42px}
-.nav-links{display:none}
 .contact-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
 
-<!-- TOP NAVIGATION -->
+<!-- NAVIGATION -->
 <nav class="topnav">
   <div class="topnav-inner">
     <div class="brand">Mackeus <span>Nguni</span></div>
+    
+    <!-- Desktop Menu -->
     <div class="nav-links">
       <a href="#about">About</a>
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
-      <a href="#teaching">Teaching</a>
+      <a href="#teaching">Teaching & CV</a>
       <a href="#contact">Contact</a>
     </div>
+    
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+  </div>
+  
+  <!-- Mobile Menu Dropdown -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#research" onclick="toggleMenu()">Research</a>
+    <a href="#publications" onclick="toggleMenu()">Publications</a>
+    <a href="#teaching" onclick="toggleMenu()">Teaching & CV</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
   </div>
 </nav>
 
-<!-- HERO SECTION (Premium Look) -->
+<!-- HERO -->
 <header class="hero">
   <div class="hero-inner">
     <h1>Mackeus Nguni</h1>
-    
-    <div class="hero-quote">
-      "Research focused on Ecocriticism and Environmental Literature, bridging literary scholarship, environmental humanities, and language education."
-    </div>
-
     <div class="hero-meta">
       <span>🎓 Assistant Lecturer, University of Bertoua</span>
       <span>🇨🇲 Cameroon</span>
+      <span>✍🏾 Scholar of African Literature</span>
     </div>
-
-    <a href="https://orcid.org/0009-0002-2201-0552" target="_blank" class="btn-hero">View ORCID Profile</a>
   </div>
 </header>
 
-<!-- ABOUT SECTION (With Photo) -->
+<!-- QUICK NAVIGATION CARDS (The "Motion" idea) -->
+<div class="quick-nav">
+  <div class="quick-nav-inner">
+    <a href="#publications" class="q-card"><h3>Publications</h3></a>
+    <a href="#research" class="q-card"><h3>Research</h3></a>
+    <a href="#teaching" class="q-card"><h3>Teaching & CV</h3></a>
+    <a href="#contact" class="q-card"><h3>Contact</h3></a>
+  </div>
+</div>
+
+<!-- ABOUT SECTION -->
 <section id="about" class="section">
   <div class="section-inner">
     <span class="section-title">Academic Profile</span>
     <h2>About Dr. Nguni</h2>
     
     <div class="about-grid">
-      <!-- Cloudinary Optimized Photo -->
       <img class="profile-photo" src="https://res.cloudinary.com/kqymjysn/image/upload/w_600,q_auto,f_auto/v1794498581/D64D143A-9051-4BF4-AB89-72792A9904E7.png" alt="Dr. Mackeus Nguni">
       
       <div>
         <p>Dr. Mackeus Nguni holds a PhD in African Literature from the University of Buea. He is currently an Assistant Lecturer in the Department of Bilingual Letters at the Higher Teacher Training College, University of Bertoua, Cameroon.</p>
-        <p>His research and teaching bridge literary scholarship, environmental humanities, cultural studies, and language education. His academic journey is shaped by a sustained interest in African literary traditions, cultural identity, indigenous knowledge systems, and the relationship between human beings and their natural environment.</p>
-        <p>He approaches his career through two interconnected responsibilities: the production of knowledge through research, and the transmission of knowledge through university teaching.</p>
+        
+        <!-- Hidden Text -->
+        <div id="more-about" class="hidden-content">
+          <p>His research and teaching bridge literary scholarship, environmental humanities, cultural studies, and language education. His academic journey is shaped by a sustained interest in African literary traditions, cultural identity, indigenous knowledge systems, and the relationship between human beings and their natural environment.</p>
+          <p>He approaches his career through two interconnected responsibilities: the production of knowledge through research, and the transmission of knowledge through university teaching.</p>
+        </div>
+        
+        <button class="btn btn-outline" onclick="toggleReadMore('more-about', this)" style="margin-top:15px;">Continue Reading About Dr. Nguni</button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- RESEARCH -->
-<section id="research" class="section" style="background:#f9f9f9; border-top:1px solid #eee; border-bottom:1px solid #eee;">
+<!-- RESEARCH SECTION -->
+<section id="research" class="section" style="background:#f9f9f9;">
   <div class="section-inner">
-    <span class="section-title">Research and Specialisation</span>
+    <span class="section-title">Specialisation</span>
     <h2>Theoretical Orientation</h2>
-    <p>Dr. Nguni's principal area of specialisation is African Literature, with particular interest in the intersections of literature, culture, spirituality, and the environment. A significant part of his research examines how African writers represent nature beyond its physical and economic dimensions, as a space of cultural memory, spiritual significance, and ancestral relationships.</p>
-    <p>His research draws primarily on <strong>Ecocriticism</strong> (examining representations of nature and ecological destruction) and <strong>Ethnocriticism</strong> (investigating how myths, rituals, and indigenous beliefs inform literary representations of ecological ethics).</p>
+    <p>Dr. Nguni's principal area of specialisation is African Literature, with particular interest in the intersections of literature, culture, spirituality, and the environment. His research draws primarily on <strong>Ecocriticism</strong> and <strong>Ethnocriticism</strong>.</p>
+    
+    <!-- Hidden Text -->
+    <div id="more-research" class="hidden-content">
+      <p>A significant part of his research examines how African writers represent nature beyond its physical and economic dimensions, as a space of cultural memory, spiritual significance, and ancestral relationships.</p>
+      <p>Through Ecocriticism, he examines representations of nature and ecological destruction. Through Ethnocriticism, he investigates how myths, rituals, and indigenous beliefs inform literary representations of ecological ethics.</p>
+    </div>
+    
+    <button class="btn btn-outline" onclick="toggleReadMore('more-research', this)" style="margin-top:15px;">Read More on Research</button>
   </div>
 </section>
 
-<!-- PUBLICATIONS -->
+<!-- PUBLICATIONS SECTION -->
 <section id="publications" class="section">
   <div class="section-inner">
     <span class="section-title">Selected Works</span>
     <h2>Publications</h2>
     
-    <div class="pub-category">Scientific Publications (Peer-Reviewed)</div>
-
     <a href="https://doi.org/10.11648/j.ijla.20261404.11" target="_blank" class="pub-item">
       <div class="pub-title">Child Labour as Ecological Violence: Figuration and Transfiguration in Bate Besong’s Beasts of No Nation and Bole Butake’s Family Saga</div>
-      <div class="pub-meta">International Journal of Literature and Arts, Vol. 14, pp 92-102, 2026</div>
-      <div class="pub-contrib">Mackeus Nguni</div>
+      <div class="pub-meta">International Journal of Literature and Arts, 2026</div>
     </a>
 
     <a href="https://doi.org/10.22158/sshsr.v4n4p64" target="_blank" class="pub-item">
       <div class="pub-title">Ecoculture and Spirituality in the Poetry of Nol Alembong and Bongasu Tanla-Kishani</div>
-      <div class="pub-meta">Social Science, Humanities and Sustainability Research, Vol. 4, No. 4, p64-80, 2023</div>
-      <div class="pub-contrib">Andrew T. Ngeh; Mackeus Nguni</div>
+      <div class="pub-meta">Social Science, Humanities and Sustainability Research, 2023</div>
     </a>
 
     <a href="https://doi.org/10.31920/2633-2116/2023/v4n3a4" target="_blank" class="pub-item">
       <div class="pub-title">Beyond the Physical Paradigm of Ecofeminism: Women, Nature and Spirituality in Bole Butake's Selected Plays</div>
-      <div class="pub-meta">Journal of African Languages and Literary Studies, Vol. 4, No. 3, p59-77, 2023</div>
-      <div class="pub-contrib">Andrew Ngeh; Mackeus Nguni</div>
+      <div class="pub-meta">Journal of African Languages and Literary Studies, 2023</div>
     </a>
-
-    <div class="pub-category" style="margin-top:50px;">Books and Other Publications</div>
 
     <a href="#" class="pub-item">
       <div class="pub-title">Money Mind</div>
       <div class="pub-meta">Bookman Publishers, Buea, Cameroon, 2022</div>
-      <div class="pub-contrib">Mackeus Nguni</div>
     </a>
   </div>
 </section>
 
-<!-- TEACHING & CONFERENCES -->
-<section id="teaching" class="section" style="background:#f9f9f9; border-top:1px solid #eee; border-bottom:1px solid #eee;">
+<!-- TEACHING & CV SECTION -->
+<section id="teaching" class="section" style="background:#f9f9f9;">
   <div class="section-inner">
     <span class="section-title">Academic Experience</span>
-    <h2>Teaching and Conferences</h2>
+    <h2>Teaching and CV</h2>
     
     <p><strong>Assistant Lecturer</strong>, University of Bertoua (2026 - Present)</p>
-    <table class="cv-table">
-      <tr>
-        <th>Level</th>
-        <th>Courses Taught</th>
-      </tr>
-      <tr>
-        <td>100 Level</td>
-        <td>BIF 112: English Proficiency, BIF 122: Rhetorics, BIF 131: Topical Discussions of Literary Texts</td>
-      </tr>
-      <tr>
-        <td>200 Level</td>
-        <td>BIL 214: Teaching Methods, BIL 224: The Sentence and the Paragraph, FBS 263: Anglais pour scientifiques francophones, FBL 263: Anglais pour litteraires francophones</td>
-      </tr>
-      <tr>
-        <td>400 Level</td>
-        <td>BIL 412: Discourse Analysis, FBS 467: Anglais pour scientifiques francophones, FBL 467: Anglais pour littéraires francophones</td>
-      </tr>
-      <tr>
-        <td>500 Level</td>
-        <td>FBS 569: Anglais pour scientifiques francophones, FBL 569: Anglais pour litteraires francophones</td>
-      </tr>
-    </table>
+    
+    <!-- Hidden Table -->
+    <div id="more-courses" class="hidden-content">
+      <table class="cv-table">
+        <tr><th>Level</th><th>Courses Taught</th></tr>
+        <tr><td>100 Level</td><td>BIF 112: English Proficiency, BIF 122: Rhetorics, BIF 131: Topical Discussions of Literary Texts</td></tr>
+        <tr><td>200 Level</td><td>BIL 214: Teaching Methods, BIL 224: The Sentence and the Paragraph, FBS 263: Anglais pour scientifiques francophones</td></tr>
+        <tr><td>400 Level</td><td>BIL 412: Discourse Analysis, FBS 467: Anglais pour scientifiques francophones, FBL 467: Anglais pour littéraires francophones</td></tr>
+        <tr><td>500 Level</td><td>FBS 569: Anglais pour scientifiques francophones, FBL 569: Anglais pour litteraires francophones</td></tr>
+      </table>
 
-    <p style="margin-top:40px;"><strong>Graduate Teaching Assistant</strong>, University of Buea (2020 - 2025)</p>
-    <p>Lit 212: Survey of African Literature, Lit 306: Cameroon Literature of English Expression, Lit 439: Literary Theory and Criticism.</p>
+      <p style="margin-top:30px;"><strong>Graduate Teaching Assistant</strong>, University of Buea (2020 - 2025)</p>
+      <p>Lit 212: Survey of African Literature, Lit 306: Cameroon Literature of English Expression, Lit 439: Literary Theory and Criticism.</p>
+    </div>
 
-    <h3 style="margin-top:40px; margin-bottom:15px; font-size:20px; color:#0a1128;">Selected Conferences and Seminars</h3>
-    <ul style="margin-left:20px; color:#444; font-size:16px; line-height:1.8;">
-      <li><strong>International Conference (April 2026):</strong> HTTC Bertoua. Theme: "Littérature au service de l'enfance: la problématique et la lutte contre le travail des enfants".</li>
-      <li><strong>Pedagogic Seminar (May 2026):</strong> University of Bertoua. Theme: "Synergy between Teaching, Research and Development Support".</li>
-      <li><strong>Annual Lecture (June 2026):</strong> Hotel Diplo Juvance, Yaounde. Kashim Ibrahim Tala and Paul Mbangwana Annual Lectures.</li>
-    </ul>
-
+    <button class="btn btn-outline" onclick="toggleReadMore('more-courses', this)" style="margin-top:15px; margin-bottom:30px;">See More Courses Taught by Dr. Nguni</button>
+    
+    <br>
+    <!-- Placeholder for CV PDF -->
+    <a href="#" class="btn btn-gold">Download Full CV (PDF)</a>
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- CONTACT SECTION -->
 <section id="contact" class="section">
   <div class="section-inner">
     <span class="section-title">Get in Touch</span>
@@ -240,6 +265,34 @@ footer a:hover{text-decoration:underline}
   <p>&copy; 2026 Dr. Mackeus Nguni. All rights reserved.</p>
   <p style="margin-top:10px;"><a href="https://orcid.org/0009-0002-2201-0552" target="_blank">ORCID iD: 0009-0002-2201-0552</a></p>
 </footer>
+
+<!-- JAVASCRIPT FOR INTERACTIVITY -->
+<script>
+// Mobile Menu Toggle
+function toggleMenu() {
+  var menu = document.getElementById("mobileMenu");
+  if (menu.classList.contains("open")) {
+    menu.classList.remove("open");
+  } else {
+    menu.classList.add("open");
+  }
+}
+
+// Read More / Read Less Toggle
+function toggleReadMore(id, btn) {
+  var content = document.getElementById(id);
+  if (content.style.display === "block") {
+    content.style.display = "none";
+    // Change text back based on the current text
+    if (btn.innerText.includes("Continue")) btn.innerText = "Continue Reading About Dr. Nguni";
+    else if (btn.innerText.includes("Research")) btn.innerText = "Read More on Research";
+    else if (btn.innerText.includes("Courses")) btn.innerText = "See More Courses Taught by Dr. Nguni";
+  } else {
+    content.style.display = "block";
+    btn.innerText = "Read Less";
+  }
+}
+</script>
 
 </body>
 </html>
