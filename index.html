@@ -9,77 +9,73 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:Georgia, 'Times New Roman', serif;color:#e0e0e0;background:#0a1128;line-height:1.7;-webkit-font-smoothing:antialiased}
+body{font-family:Georgia, 'Times New Roman', serif;color:#333;line-height:1.8;background:#fff;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 
-/* HEADER / NAV */
-.topnav{background:rgba(10, 17, 40, 0.95);position:sticky;top:0;z-index:1000;border-bottom:1px solid #1c2b4a}
-.topnav-inner{max-width:1200px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
-.brand{font-size:20px;font-weight:700;letter-spacing:1px;color:#fff;font-family:Arial,Helvetica,sans-serif;text-transform:uppercase}
+/* TOP NAV (Sticky) */
+.topnav{background:#0a1128;color:#fff;position:sticky;top:0;z-index:1000;border-bottom:1px solid #1c2b4a}
+.topnav-inner{max-width:1100px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.brand{font-size:18px;font-weight:700;letter-spacing:1px;color:#fff;font-family:Arial,Helvetica,sans-serif;text-transform:uppercase}
 .brand span{color:#c5a059}
-.nav-links{display:flex;gap:30px;flex-wrap:wrap;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase}
+.nav-links{display:flex;gap:24px;flex-wrap:wrap;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:600;letter-spacing:1px;text-transform:uppercase}
 .nav-links a{color:#a8b2c1;transition:color 0.2s}
 .nav-links a:hover{color:#c5a059}
 
-/* HERO SECTION */
-.hero{background:#0a1128;padding:100px 24px 80px;border-bottom:1px solid #1c2b4a;position:relative;overflow:hidden}
-.hero::before{content:"";position:absolute;top:0;right:-10%;width:50%;height:100%;background:radial-gradient(circle, rgba(197,160,89,0.05) 0%, rgba(10,17,40,0) 70%);z-index:0}
-.hero-inner{max-width:1000px;margin:0 auto;position:relative;z-index:1}
-.hero-tag{font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:#c5a059;margin-bottom:20px}
-.hero h1{font-size:72px;line-height:1.1;color:#fff;margin-bottom:30px;font-weight:400}
-.hero-quote{font-size:22px;font-style:italic;color:#a8b2c1;max-width:800px;border-left:3px solid #c5a059;padding-left:20px;margin-bottom:40px;line-height:1.6}
-.hero-meta{display:flex;gap:30px;font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#8e9baf;margin-bottom:40px}
+/* HERO SECTION (Dark & Premium) */
+.hero{background:#0a1128;color:#fff;padding:90px 24px;text-align:left;border-bottom:4px solid #c5a059}
+.hero-inner{max-width:1000px;margin:0 auto}
+.hero h1{font-size:64px;line-height:1.1;color:#fff;margin-bottom:24px;font-weight:400}
+.hero-quote{font-size:20px;font-style:italic;color:#a8b2c1;max-width:800px;border-left:3px solid #c5a059;padding-left:20px;margin-bottom:30px;line-height:1.6}
+.hero-meta{display:flex;gap:30px;font-family:Arial,Helvetica,sans-serif;font-size:15px;color:#8e9baf;margin-bottom:30px;flex-wrap:wrap}
 .hero-meta span{display:flex;align-items:center;gap:8px}
+.btn-hero{display:inline-block;padding:12px 24px;border-radius:4px;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;background:#c5a059;color:#0a1128;transition:background 0.2s}
+.btn-hero:hover{background:#d4b372}
 
-/* BUTTONS */
-.btn{display:inline-block;padding:14px 28px;border-radius:30px;font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;letter-spacing:0.5px;transition:all 0.2s;cursor:pointer;text-align:center}
-.btn-gold{background:#c5a059;color:#0a1128;border:2px solid #c5a059}
-.btn-gold:hover{background:#d4b372;border-color:#d4b372;transform:translateY(-2px)}
-.btn-outline{background:transparent;color:#c5a059;border:2px solid #c5a059}
-.btn-outline:hover{background:#c5a059;color:#0a1128}
+/* MAIN CONTENT SECTIONS (White & Clean) */
+.section{padding:70px 24px}
+.section-inner{max-width:900px;margin:0 auto}
+.section-title{font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#c5a059;margin-bottom:12px;display:block}
+.section h2{font-size:32px;color:#0a1128;margin-bottom:30px;font-weight:700;line-height:1.3}
+.section p{font-size:17px;color:#444;margin-bottom:18px}
 
-/* SECTIONS */
-.section{padding:80px 24px}
-.section-inner{max-width:1000px;margin:0 auto}
-.section-title{font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:#c5a059;margin-bottom:20px;display:block}
-.section h2{font-size:36px;color:#fff;margin-bottom:30px;font-weight:400;line-height:1.3}
-.section p{font-size:18px;color:#a8b2c1;margin-bottom:20px;max-width:800px}
-
-/* RESEARCH CARDS */
-.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:40px}
-.card{background:#0d1833;border:1px solid #1c2b4a;padding:40px;border-radius:8px;transition:border-color 0.3s}
-.card:hover{border-color:#c5a059}
-.card h3{font-family:Arial,Helvetica,sans-serif;font-size:20px;color:#fff;margin-bottom:15px}
-.card p{font-size:16px;color:#8e9baf;margin-bottom:0}
+/* ABOUT SECTION WITH PHOTO */
+.about-grid{display:grid;grid-template-columns:280px 1fr;gap:40px;align-items:start}
+.profile-photo{width:100%;height:auto;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,0.1);background:#eee;border:5px solid #fff;}
 
 /* PUBLICATIONS */
-.pub-category{font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#8e9baf;margin:40px 0 20px;padding-bottom:10px;border-bottom:1px solid #1c2b4a}
-.pub-item{display:block;padding:25px 0;border-bottom:1px solid #1c2b4a;text-decoration:none;transition:background 0.2s}
-.pub-item:hover{background:rgba(255,255,255,0.02)}
-.pub-title{font-size:20px;color:#fff;margin-bottom:10px;line-height:1.4}
-.pub-meta{font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#c5a059;margin-bottom:8px}
-.pub-contrib{font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#666;font-style:italic}
+.pub-category{font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:#888;margin:40px 0 20px;padding-bottom:10px;border-bottom:1px solid #eee}
+.pub-item{display:block;padding:20px 0;border-bottom:1px solid #eee;text-decoration:none;transition:background 0.2s}
+.pub-item:hover{background:#fcfcfc}
+.pub-title{font-size:18px;color:#0a1128;margin-bottom:6px;font-weight:700;line-height:1.4}
+.pub-meta{font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#666;margin-bottom:4px}
+.pub-contrib{font-family:Arial,Helvetica,sans-serif;font-size:13px;color:#999;font-style:italic}
 
-/* CONTACT */
-.contact-box{text-align:center;padding:60px 20px;background:#0d1833;border:1px solid #1c2b4a;border-radius:8px;margin-top:40px}
-.contact-box h3{font-size:28px;color:#fff;margin-bottom:15px}
-.contact-box p{font-size:16px;color:#8e9baf;margin-bottom:30px;max-width:600px;margin-left:auto;margin-right:auto}
-.contact-links{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
+/* TEACHING TABLE */
+.cv-table{width:100%;border-collapse:collapse;margin-top:20px;font-family:Arial,Helvetica,sans-serif;font-size:14.5px;}
+.cv-table th{text-align:left;padding:12px;background:#0a1128;color:#fff;font-weight:700;}
+.cv-table td{padding:12px;border-bottom:1px solid #eee;color:#444;vertical-align:top;}
+.cv-table tr:nth-child(even){background:#fcfcfc;}
+
+/* CONTACT BUTTONS */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:30px}
+.btn-contact{display:block;text-align:center;padding:16px;border-radius:8px;font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:15px;transition:0.2s}
+.btn-primary{background:#0a1128;color:#fff;}
+.btn-primary:hover{background:#1c2b4a;}
+.btn-whatsapp{background:#25D366;color:#fff;}
+.btn-whatsapp:hover{background:#1eb955;}
 
 /* FOOTER */
-footer{background:#050914;color:#666;padding:40px 20px;text-align:center;font-family:Arial,Helvetica,sans-serif;font-size:13px;border-top:1px solid #1c2b4a}
+footer{background:#0a1128;color:#8e9baf;padding:40px 20px;text-align:center;font-family:Arial,Helvetica,sans-serif;font-size:13px;border-top:1px solid #1c2b4a}
 footer a{color:#c5a059}
 footer a:hover{text-decoration:underline}
 
 /* MOBILE */
 @media (max-width:768px){
-.hero h1{font-size:48px}
-.hero-quote{font-size:18px}
-.grid-2{grid-template-columns:1fr}
+.about-grid{grid-template-columns:1fr}
+.hero h1{font-size:42px}
 .nav-links{display:none}
-.section h2{font-size:28px}
-.hero-meta{flex-direction:column;gap:15px}
+.contact-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -93,60 +89,56 @@ footer a:hover{text-decoration:underline}
       <a href="#about">About</a>
       <a href="#research">Research</a>
       <a href="#publications">Publications</a>
+      <a href="#teaching">Teaching</a>
       <a href="#contact">Contact</a>
     </div>
   </div>
 </nav>
 
-<!-- HERO -->
+<!-- HERO SECTION (Premium Look) -->
 <header class="hero">
   <div class="hero-inner">
-    <div class="hero-tag">In Ecocriticism and Environmental Literature</div>
-    <h1>Mackeus<br>Nguni</h1>
+    <h1>Mackeus Nguni</h1>
     
     <div class="hero-quote">
-      "Research focused on Ecocriticism and Environmental Literature and adjacent fields."
+      "Research focused on Ecocriticism and Environmental Literature, bridging literary scholarship, environmental humanities, and language education."
     </div>
 
     <div class="hero-meta">
-      <span>🎓 Lecturer, University of Bertoua</span>
+      <span>🎓 Assistant Lecturer, University of Bertoua</span>
       <span>🇨🇲 Cameroon</span>
     </div>
 
-    <div style="display:flex; gap:15px; flex-wrap:wrap;">
-      <a href="https://orcid.org/0009-0002-2201-0552" target="_blank" class="btn btn-gold">View ORCID Profile</a>
-      <a href="#contact" class="btn btn-outline">Contact and CV</a>
-    </div>
+    <a href="https://orcid.org/0009-0002-2201-0552" target="_blank" class="btn-hero">View ORCID Profile</a>
   </div>
 </header>
 
-<!-- ABOUT -->
+<!-- ABOUT SECTION (With Photo) -->
 <section id="about" class="section">
   <div class="section-inner">
     <span class="section-title">Academic Profile</span>
-    <h2>Bridging literary scholarship, environmental humanities, and language education.</h2>
-    <p>Dr. Mackeus Nguni holds a PhD in African Literature from the University of Buea. His research and teaching bridge literary scholarship, environmental humanities, cultural studies, and language education. His academic journey is shaped by a sustained interest in African literary traditions, cultural identity, indigenous knowledge systems, and the relationship between human beings and their natural environment.</p>
-    <p>He approaches his career through two interconnected responsibilities: the production of knowledge through research, and the transmission of knowledge through university teaching.</p>
+    <h2>About Dr. Nguni</h2>
+    
+    <div class="about-grid">
+      <!-- Cloudinary Optimized Photo -->
+      <img class="profile-photo" src="https://res.cloudinary.com/kqymjysn/image/upload/w_600,q_auto,f_auto/v1794498581/D64D143A-9051-4BF4-AB89-72792A9904E7.png" alt="Dr. Mackeus Nguni">
+      
+      <div>
+        <p>Dr. Mackeus Nguni holds a PhD in African Literature from the University of Buea. He is currently an Assistant Lecturer in the Department of Bilingual Letters at the Higher Teacher Training College, University of Bertoua, Cameroon.</p>
+        <p>His research and teaching bridge literary scholarship, environmental humanities, cultural studies, and language education. His academic journey is shaped by a sustained interest in African literary traditions, cultural identity, indigenous knowledge systems, and the relationship between human beings and their natural environment.</p>
+        <p>He approaches his career through two interconnected responsibilities: the production of knowledge through research, and the transmission of knowledge through university teaching.</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <!-- RESEARCH -->
-<section id="research" class="section" style="background:#0d1833; border-top:1px solid #1c2b4a; border-bottom:1px solid #1c2b4a;">
+<section id="research" class="section" style="background:#f9f9f9; border-top:1px solid #eee; border-bottom:1px solid #eee;">
   <div class="section-inner">
     <span class="section-title">Research and Specialisation</span>
     <h2>Theoretical Orientation</h2>
     <p>Dr. Nguni's principal area of specialisation is African Literature, with particular interest in the intersections of literature, culture, spirituality, and the environment. A significant part of his research examines how African writers represent nature beyond its physical and economic dimensions, as a space of cultural memory, spiritual significance, and ancestral relationships.</p>
-    
-    <div class="grid-2">
-      <div class="card">
-        <h3>Ecocriticism</h3>
-        <p>Examining the relationship between literature and the physical environment, paying attention to representations of nature, environmental consciousness, and ecological destruction.</p>
-      </div>
-      <div class="card">
-        <h3>Ethnocriticism</h3>
-        <p>Investigating how myths, rituals, ancestral traditions, and indigenous beliefs inform literary representations of nature and ecological ethics.</p>
-      </div>
-    </div>
+    <p>His research draws primarily on <strong>Ecocriticism</strong> (examining representations of nature and ecological destruction) and <strong>Ethnocriticism</strong> (investigating how myths, rituals, and indigenous beliefs inform literary representations of ecological ethics).</p>
   </div>
 </section>
 
@@ -158,56 +150,87 @@ footer a:hover{text-decoration:underline}
     
     <div class="pub-category">Scientific Publications (Peer-Reviewed)</div>
 
-    <!-- Publication 1 -->
     <a href="https://doi.org/10.11648/j.ijla.20261404.11" target="_blank" class="pub-item">
       <div class="pub-title">Child Labour as Ecological Violence: Figuration and Transfiguration in Bate Besong’s Beasts of No Nation and Bole Butake’s Family Saga</div>
-      <div class="pub-meta">International Journal of Literature and Arts | September 2026</div>
+      <div class="pub-meta">International Journal of Literature and Arts, Vol. 14, pp 92-102, 2026</div>
       <div class="pub-contrib">Mackeus Nguni</div>
     </a>
 
-    <!-- Publication 2 -->
-    <a href="https://doi.org/10.31920/2633-2116/2023/v4n3a4" target="_blank" class="pub-item">
-      <div class="pub-title">Beyond the Physical Paradigm of Ecofeminism: Women, Nature and Spirituality in Bole Butake's Selected Plays</div>
-      <div class="pub-meta">Journal of African Languages and Literary Studies | December 2023</div>
-      <div class="pub-contrib">Andrew Ngeh; Mackeus Nguni</div>
-    </a>
-
-    <!-- Publication 3 -->
     <a href="https://doi.org/10.22158/sshsr.v4n4p64" target="_blank" class="pub-item">
       <div class="pub-title">Ecoculture and Spirituality in the Poetry of Nol Alembong and Bongasu Tanla-Kishani</div>
-      <div class="pub-meta">Social Science, Humanities and Sustainability Research | July 2023</div>
+      <div class="pub-meta">Social Science, Humanities and Sustainability Research, Vol. 4, No. 4, p64-80, 2023</div>
       <div class="pub-contrib">Andrew T. Ngeh; Mackeus Nguni</div>
+    </a>
+
+    <a href="https://doi.org/10.31920/2633-2116/2023/v4n3a4" target="_blank" class="pub-item">
+      <div class="pub-title">Beyond the Physical Paradigm of Ecofeminism: Women, Nature and Spirituality in Bole Butake's Selected Plays</div>
+      <div class="pub-meta">Journal of African Languages and Literary Studies, Vol. 4, No. 3, p59-77, 2023</div>
+      <div class="pub-contrib">Andrew Ngeh; Mackeus Nguni</div>
     </a>
 
     <div class="pub-category" style="margin-top:50px;">Books and Other Publications</div>
 
-    <!-- Book -->
     <a href="#" class="pub-item">
       <div class="pub-title">Money Mind</div>
-      <div class="pub-meta">Bookman Publishers, Buea, Cameroon | 2022</div>
+      <div class="pub-meta">Bookman Publishers, Buea, Cameroon, 2022</div>
       <div class="pub-contrib">Mackeus Nguni</div>
     </a>
+  </div>
+</section>
+
+<!-- TEACHING & CONFERENCES -->
+<section id="teaching" class="section" style="background:#f9f9f9; border-top:1px solid #eee; border-bottom:1px solid #eee;">
+  <div class="section-inner">
+    <span class="section-title">Academic Experience</span>
+    <h2>Teaching and Conferences</h2>
+    
+    <p><strong>Assistant Lecturer</strong>, University of Bertoua (2026 - Present)</p>
+    <table class="cv-table">
+      <tr>
+        <th>Level</th>
+        <th>Courses Taught</th>
+      </tr>
+      <tr>
+        <td>100 Level</td>
+        <td>BIF 112: English Proficiency, BIF 122: Rhetorics, BIF 131: Topical Discussions of Literary Texts</td>
+      </tr>
+      <tr>
+        <td>200 Level</td>
+        <td>BIL 214: Teaching Methods, BIL 224: The Sentence and the Paragraph, FBS 263: Anglais pour scientifiques francophones, FBL 263: Anglais pour litteraires francophones</td>
+      </tr>
+      <tr>
+        <td>400 Level</td>
+        <td>BIL 412: Discourse Analysis, FBS 467: Anglais pour scientifiques francophones, FBL 467: Anglais pour littéraires francophones</td>
+      </tr>
+      <tr>
+        <td>500 Level</td>
+        <td>FBS 569: Anglais pour scientifiques francophones, FBL 569: Anglais pour litteraires francophones</td>
+      </tr>
+    </table>
+
+    <p style="margin-top:40px;"><strong>Graduate Teaching Assistant</strong>, University of Buea (2020 - 2025)</p>
+    <p>Lit 212: Survey of African Literature, Lit 306: Cameroon Literature of English Expression, Lit 439: Literary Theory and Criticism.</p>
+
+    <h3 style="margin-top:40px; margin-bottom:15px; font-size:20px; color:#0a1128;">Selected Conferences and Seminars</h3>
+    <ul style="margin-left:20px; color:#444; font-size:16px; line-height:1.8;">
+      <li><strong>International Conference (April 2026):</strong> HTTC Bertoua. Theme: "Littérature au service de l'enfance: la problématique et la lutte contre le travail des enfants".</li>
+      <li><strong>Pedagogic Seminar (May 2026):</strong> University of Bertoua. Theme: "Synergy between Teaching, Research and Development Support".</li>
+      <li><strong>Annual Lecture (June 2026):</strong> Hotel Diplo Juvance, Yaounde. Kashim Ibrahim Tala and Paul Mbangwana Annual Lectures.</li>
+    </ul>
 
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section" style="background:#0d1833; border-top:1px solid #1c2b4a;">
+<section id="contact" class="section">
   <div class="section-inner">
-    <div class="contact-box">
-      <h3>Get in Touch</h3>
-      <p>For academic enquiries, conference invitations, research collaboration, or to download the full CV, please use the links below.</p>
-      
-      <div class="contact-links">
-        <!-- Replace the # with your actual CV PDF link when ready -->
-        <a href="#" class="btn btn-gold">Download Full CV (PDF)</a>
-        
-        <!-- WhatsApp link -->
-        <a href="https://wa.me/237678639128?text=Hello%20Dr.%20Nguni%2C%20I%20am%20contacting%20you%20from%20your%20academic%20website." target="_blank" class="btn btn-outline">Enquire via WhatsApp</a>
-        
-        <!-- Email link -->
-        <a href="mailto:contact@mackeusnguni.com" class="btn btn-outline">Send an Email</a>
-      </div>
+    <span class="section-title">Get in Touch</span>
+    <h2>Contact Dr. Nguni</h2>
+    <p>For academic enquiries, conference invitations, or research collaboration, please use the links below.</p>
+    
+    <div class="contact-grid">
+      <a href="mailto:mackeusnguni.ubertoua@gmail.com" class="btn-contact btn-primary">Send an Email</a>
+      <a href="https://wa.me/237678639128?text=Hello%20Dr.%20Nguni%2C%20I%20am%20contacting%20you%20from%20your%20academic%20website." target="_blank" class="btn-contact btn-whatsapp">Enquire via WhatsApp</a>
     </div>
   </div>
 </section>
@@ -220,4 +243,3 @@ footer a:hover{text-decoration:underline}
 
 </body>
 </html>
-
